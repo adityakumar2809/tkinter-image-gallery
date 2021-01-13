@@ -48,6 +48,8 @@ def main():
 
         img_list = [createImage(f'images/image{counter}.jfif')
                     for counter in range(1, 6)]
+        img_label_list = [createLabelWithImage(root, img_item)
+                          for img_item in img_list]
 
         root.mainloop()
 
