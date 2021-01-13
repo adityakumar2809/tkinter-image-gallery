@@ -18,6 +18,19 @@ def createQuitCommandButton(root, text='Exit Program'):
     return my_button
 
 
+def createDirectionCommandButton(root, text, direction):
+    my_button = tkinter.Button(
+        master=root,
+        text=text,
+        command=lambda: moveInADirection(direction)
+    )
+    return my_button
+
+
+def moveInADirection(direction):
+    print(direction)
+
+
 def createImage(path='images/image1.jfif'):
     img = ImageTk.PhotoImage(
         Image.open(path)
@@ -51,7 +64,19 @@ def main():
         img_label_list[0].grid(row=0, column=0, columnspan=3)
 
         quit_button = createQuitCommandButton(root)
+        left_button = createDirectionCommandButton(
+            root,
+            text='<<',
+            direction='left'
+        )
+        right_button = createDirectionCommandButton(
+            root,
+            text='>>',
+            direction='right'
+        )
+        left_button.grid(row=1, column=0)
         quit_button.grid(row=1, column=1)
+        right_button.grid(row=1, column=2)
 
         root.mainloop()
 
