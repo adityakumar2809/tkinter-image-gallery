@@ -33,7 +33,9 @@ def createDirectionCommandButton(root, text, direction):
 
 
 def moveInADirection(direction):
-    global current_image_index, max_image_index
+    global current_image_index, max_image_index, img_label_list
+
+    img_label_list[current_image_index].grid_forget()
 
     if direction == 'left':
         current_image_index -= 1
@@ -43,6 +45,9 @@ def moveInADirection(direction):
         current_image_index = 0
     elif current_image_index > max_image_index:
         current_image_index = max_image_index
+
+    img_label_list[current_image_index].grid(row=0, column=0, columnspan=3)
+
     print(current_image_index)
 
 
