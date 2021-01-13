@@ -48,8 +48,6 @@ def moveInADirection(direction):
 
     img_label_list[current_image_index].grid(row=0, column=0, columnspan=3)
 
-    print(current_image_index)
-
 
 def createImage(path='images/image1.jfif'):
     img = ImageTk.PhotoImage(
