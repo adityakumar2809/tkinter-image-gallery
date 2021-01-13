@@ -2,6 +2,10 @@ import tkinter
 from PIL import Image, ImageTk
 
 
+global current_image_index
+current_image_index = 0
+
+
 def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
     root = tkinter.Tk()
     root.title(title)
