@@ -34,7 +34,8 @@ def createDirectionCommandButton(root, text, direction):
 
 
 def moveInADirection(direction):
-    global current_image_index, max_image_index, img_label_list
+    global current_image_index, max_image_index, img_label_list, left_button,\
+           right_button
 
     img_label_list[current_image_index].grid_forget()
 
@@ -42,10 +43,16 @@ def moveInADirection(direction):
         current_image_index -= 1
     elif direction == 'right':
         current_image_index += 1
+    
     if current_image_index <= 0:
         current_image_index = 0
+        left_button.config(state=tkinter.DISABLED)
     elif current_image_index >= max_image_index:
         current_image_index = max_image_index
+        right_button.config(state=tkinter.DISABLED)
+    else:
+        left_button.config(state=tkinter.NORMAL)
+        right_button.config(state=tkinter.NORMAL)
 
     img_label_list[current_image_index].grid(row=0, column=0, columnspan=3)
 
