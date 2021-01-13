@@ -33,10 +33,16 @@ def createDirectionCommandButton(root, text, direction):
 
 
 def moveInADirection(direction):
-    global current_image_index
+    global current_image_index, max_image_index
     if direction == 'left':
-        pass
-    print(direction)
+        current_image_index -= 1
+    elif direction == 'right':
+        current_image_index += 1
+    if current_image_index < 0:
+        current_image_index = 0
+    elif current_image_index > max_image_index:
+        current_image_index = max_image_index
+    print(current_image_index)
 
 
 def createImage(path='images/image1.jfif'):
