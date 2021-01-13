@@ -35,8 +35,6 @@ def createDirectionCommandButton(root, text, direction):
 def moveInADirection(direction):
     global current_image_index, max_image_index
 
-
-
     if direction == 'left':
         current_image_index -= 1
     elif direction == 'right':
