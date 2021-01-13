@@ -2,8 +2,9 @@ import tkinter
 from PIL import Image, ImageTk
 
 
-global current_image_index
+global current_image_index, max_image_index
 current_image_index = 0
+max_image_index = 0
 
 
 def tkinterSetup(title='Untitled', icon_path='images/icon.ico'):
@@ -32,6 +33,9 @@ def createDirectionCommandButton(root, text, direction):
 
 
 def moveInADirection(direction):
+    global current_image_index
+    if direction == 'left':
+        pass
     print(direction)
 
 
