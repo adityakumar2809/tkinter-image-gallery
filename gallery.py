@@ -18,7 +18,7 @@ def createQuitCommandButton(root, text='Exit Program'):
     return my_button
 
 
-def createImage(path='images/icon.png'):
+def createImage(path='images/image1.jfif'):
     img = ImageTk.PhotoImage(
         Image.open(path)
     )
