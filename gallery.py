@@ -2,7 +2,7 @@ import tkinter
 from PIL import Image, ImageTk
 
 
-global current_image_index, max_image_index
+global current_image_index, max_image_index, img_label_list
 current_image_index = 0
 max_image_index = 0
 
@@ -34,6 +34,9 @@ def createDirectionCommandButton(root, text, direction):
 
 def moveInADirection(direction):
     global current_image_index, max_image_index
+
+
+
     if direction == 'left':
         current_image_index -= 1
     elif direction == 'right':
@@ -62,7 +65,7 @@ def createLabelWithImage(root, img):
 
 def main():
 
-    global max_image_index
+    global max_image_index, img_label_list
 
     running_status = {
         'icon': True
