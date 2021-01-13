@@ -43,7 +43,7 @@ def moveInADirection(direction):
         current_image_index -= 1
     elif direction == 'right':
         current_image_index += 1
-    
+
     if current_image_index <= 0:
         current_image_index = 0
         left_button.config(state=tkinter.DISABLED)
