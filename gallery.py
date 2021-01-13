@@ -24,11 +24,12 @@ def createQuitCommandButton(root, text='Exit Program'):
     return my_button
 
 
-def createDirectionCommandButton(root, text, direction):
+def createDirectionCommandButton(root, text, direction, state=tkinter.NORMAL):
     my_button = tkinter.Button(
         master=root,
         text=text,
-        command=lambda: moveInADirection(direction)
+        command=lambda: moveInADirection(direction),
+        state=state
     )
     return my_button
 
@@ -97,7 +98,8 @@ def main():
         left_button = createDirectionCommandButton(
             root,
             text='<<',
-            direction='left'
+            direction='left',
+            state=tkinter.DISABLED
         )
         right_button = createDirectionCommandButton(
             root,
