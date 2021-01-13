@@ -56,6 +56,8 @@ def createLabelWithImage(root, img):
 
 def main():
 
+    global max_image_index
+
     running_status = {
         'icon': True
     }
@@ -68,6 +70,8 @@ def main():
                     for counter in range(1, 6)]
         img_label_list = [createLabelWithImage(root, img_item)
                           for img_item in img_list]
+
+        max_image_index = len(img_list)
 
         img_label_list[0].grid(row=0, column=0, columnspan=3)
 
