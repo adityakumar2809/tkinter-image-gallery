@@ -41,16 +41,15 @@ def main():
 
     # ICONS
     if running_status['icon']:
-        root_icon = tkinterSetup(title='Icon Window')
+        root = tkinterSetup(title='Icon Window')
 
-        quit_button = createQuitCommandButton(root_icon)
+        quit_button = createQuitCommandButton(root)
         quit_button.pack()
 
-        img = createImage()
-        img_label = createLabelWithImage(root_icon, img)
-        img_label.pack()
+        img_list = [createImage(f'images/image{counter}.jfif')
+                    for counter in range(1, 6)]
 
-        root_icon.mainloop()
+        root.mainloop()
 
 
 if __name__ == "__main__":
