@@ -43,13 +43,13 @@ def main():
     if running_status['icon']:
         root = tkinterSetup(title='Icon Window')
 
-        quit_button = createQuitCommandButton(root)
-        quit_button.pack()
-
         img_list = [createImage(f'images/image{counter}.jfif')
                     for counter in range(1, 6)]
         img_label_list = [createLabelWithImage(root, img_item)
                           for img_item in img_list]
+
+        quit_button = createQuitCommandButton(root)
+        quit_button.grid(row=1, column=1)
 
         root.mainloop()
 
