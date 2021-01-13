@@ -48,6 +48,8 @@ def main():
         img_label_list = [createLabelWithImage(root, img_item)
                           for img_item in img_list]
 
+        img_label_list[0].grid(row=0, column=0, columnspan=3)
+
         quit_button = createQuitCommandButton(root)
         quit_button.grid(row=1, column=1)
 
