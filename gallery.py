@@ -34,7 +34,7 @@ def createDirectionCommandButton(root, text, direction, state=tkinter.NORMAL):
     return my_button
 
 
-def moveInADirection(rooot, direction):
+def moveInADirection(root, direction):
     global current_image_index, max_image_index, img_label_list, left_button,\
            right_button
 
@@ -56,8 +56,12 @@ def moveInADirection(rooot, direction):
         right_button.config(state=tkinter.NORMAL)
 
     img_label_list[current_image_index].grid(row=0, column=0, columnspan=3)
+    updateStatusLabel()
 
 
+def updateStatusLabel():
+    new_text = f'Image { current_image_index + 1 } of { max_image_index + 1 }'
+    status_label.config(text=new_text)
 
 
 def createImage(path='images/image1.jfif'):
