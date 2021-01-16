@@ -73,6 +73,16 @@ def createLabelWithImage(root, img):
     return my_label
 
 
+
+def createStatusLabel(root):
+    text = f'Image { current_image_index } of { max_image_index }'
+    my_label = tkinter.Label(
+        master=root,
+        text=text
+    )
+    return my_label
+
+
 def main():
 
     global max_image_index, img_label_list, left_button, right_button
