@@ -74,7 +74,7 @@ def createLabelWithImage(root, img):
 
 
 def createStatusLabel(root):
-    text = f'Image { current_image_index } of { max_image_index }'
+    text = f'Image { current_image_index + 1 } of { max_image_index + 1 }'
     my_label = tkinter.Label(
         master=root,
         text=text
