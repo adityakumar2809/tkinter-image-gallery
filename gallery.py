@@ -28,13 +28,13 @@ def createDirectionCommandButton(root, text, direction, state=tkinter.NORMAL):
     my_button = tkinter.Button(
         master=root,
         text=text,
-        command=lambda: moveInADirection(root, direction),
+        command=lambda: moveInADirection(direction),
         state=state
     )
     return my_button
 
 
-def moveInADirection(root, direction):
+def moveInADirection(direction):
     global current_image_index, max_image_index, img_label_list, left_button,\
            right_button
 
