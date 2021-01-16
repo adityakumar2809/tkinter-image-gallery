@@ -84,7 +84,10 @@ def createStatusLabel(root):
     text = f'Image { current_image_index + 1 } of { max_image_index + 1 }'
     status_label = tkinter.Label(
         master=root,
-        text=text
+        text=text,
+        relief=tkinter.SUNKEN,
+        bd=1,
+        anchor=tkinter.E
     )
 
 
@@ -124,9 +127,15 @@ def main():
         )
         createStatusLabel(root)
         left_button.grid(row=1, column=0)
-        status_label.grid(row=1, column=1)
+        quit_button.grid(row=1, column=1)
         right_button.grid(row=1, column=2)
-        quit_button.grid(row=2, column=1)
+        status_label.grid(
+            row=2,
+            column=0,
+            columnspan=3,
+            pady=10,
+            sticky=tkinter.W + tkinter.E
+        )
 
         root.mainloop()
 
