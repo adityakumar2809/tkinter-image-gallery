@@ -115,9 +115,11 @@ def main():
             text='>>',
             direction='right'
         )
+        status_label = createStatusLabel(root)
         left_button.grid(row=1, column=0)
-        quit_button.grid(row=1, column=1)
+        status_label.grid(row=1, column=1)
         right_button.grid(row=1, column=2)
+        quit_button.grid(row=2, column=1)
 
         root.mainloop()
 
